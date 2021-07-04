@@ -262,7 +262,7 @@ header ul {
 header li:not(.logo) {
   font-size: 1.5rem;
 }
-  header .logo img{
+  header .logo img,.medena_gora_logo img{
     max-width:132px;
     max-height:120px;
   }
@@ -272,6 +272,7 @@ header li:not(.logo) {
       display: table-cell;
       vertical-align:middle;
   }
+  
   header li:not(.logo) {
     font-size: 1.05rem;
     padding-left: 0px;
@@ -288,5 +289,11 @@ header li:not(.logo) {
   header .logo img{
     max-width: 92px;
     max-height: 88px;
+  }
+  h1.product{
+    font-size:6vw;
+  }
+  .medena_gora_logo{
+    display: none;
   }
 }
