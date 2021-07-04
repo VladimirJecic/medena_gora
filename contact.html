@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medena Gora : Kontakt</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+
+</head>
+<body>
+    <!-- ============================== HEADER ================================= -->
+    <header>
+          <ul>
+            <li class="logo">
+              <a href="index.html"><img src="img/logo.png" alt="Medena Gora logo"></a>
+            </li>
+            <li class=""><a href="blog.html">Blog</a></li>
+            <li id="long"><a href="onama.html">O&nbspMedenoj&nbspGori</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Proizvodi</a>
+              <div class="dropdown-content">
+                <a href="proizvodi.html">Svi proizvodi</a>
+                <a href="recepti.html">Recepti</a> 
+              </div>
+            </li>
+            <li class=""><a href="contact.html" class="active">Kontakt</a></li>
+          </ul>
+      </header>
+
+    <!-- ============================== Vizitka i Kontakt Forma ================================= -->
+    <section class="contact-form">
+      <h1 class="h1-contact">KONTAKTIRAJTE NAS</h1>
+      <div class="container">
+        <div class="vizitka"><button id="vizitkaBtn"><img src="img/medenaGora.png" alt="Vizit Karta"></button></div>
+            <form onsubmit="return validateForm()">
+              <ul class="flex-outer">
+                <li>
+                  <label for="name">Ime</label>
+                  <input type="text" id="name" placeholder="Unesite ime">
+                </li>
+                <li>
+                  <label for="email">E-MAIL</label>
+                  <input type="email" id="email" placeholder="Unesite e-mail">
+                </li>
+                <li>
+                  <label for="message">PORUKA (Bar <strong>20</strong> karaktera)</label>
+                  <textarea rows="6" id="message" placeholder="Unesite poruku"></textarea>
+                </li>
+                <li>
+                  <button type="submit">Submit</button>
+                </li>
+              </ul>
+      <p class="date"><strong>Datum</strong>: <small></small></p>
+
+            </form>
+          </div>
+    </section>
+    <!-- =====================Modal=======================-->
+    <div id="vizitkaModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="image">
+          <img src="img/medenaGora.png" alt="Vizit Karta"  usemap="#workmap">
+        </div>
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+      <footer>
+        <div class="row">
+          <div class="column"><img src="img/logo.png" alt="Medena Gora logo"></div>
+          <div class="column">
+            <img src="img/isporuka.jpg" alt="Isporuka">
+            <hr><br> <p style="color:rgb(0, 0, 0);">Besplatna isporuka na teritorije Srbije za kupovine u iznosu preko 2000 dinara!!!</p>
+          </div>
+          <div class="column"> <a href="index.html"><img src="img/lezimirpopust.jpg" alt="popust"></a> </div>
+        </div> 
+        <p>
+          Medena Gora <span id="copyright-year"> &copy; 2021 </span> &nbsp;|&nbsp; Website Designed by <strong>us xD</strong>. <br>
+          <a href="https://www.facebook.com/Medena-Gora-102331498787369/?ref=pages_you_manage" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/medena_gora/?fbclid=IwAR3ZNxWOTvavFOlQjmBjyQrvDNWwjS6RJGcUqiQXrVkyZ87zGpsvisp9dGY" target="_blank"><i class="fa fa-instagram"></i></a>        
+        </p> 
+      </footer>
+    
+      <map name="workmap">
+        <area shape="rect" coords="137,139,559,268" alt="Novosadska 1" href="https://www.google.com/maps/place/Novosadska,+Le%C5%BEimir/@45.1249281,19.5717904,18z/data=!4m5!3m4!1s0x475b0aa16c0a3567:0x2d7a5f04aa26c509!8m2!3d45.1246253!4d19.5735168">
+        <area shape="rect" coords="515,507,2223,1107" alt="Novosadska 1" href="https://www.google.com/maps/place/Novosadska,+Le%C5%BEimir/@45.1249281,19.5717904,18z/data=!4m5!3m4!1s0x475b0aa16c0a3567:0x2d7a5f04aa26c509!8m2!3d45.1246253!4d19.5735168">
+        
+      </map>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="image-map-resizer-master\js\imageMapResizer.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/contact.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('map').imageMapResize();
+      });
+    </script>
+</body>
+</html>
